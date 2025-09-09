@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Mufid & Intan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F5F0;
+            color: #4A4A4A;
+        }
+        .font-display {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .hero-bg {
+            background-image: url('https://www.transparenttextures.com/patterns/batthern.png');
+            background-color: #EAE3D6;
+            background-blend-mode: overlay;
+        }
+        .card-bg {
+            background-color: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .fade-in {
+            animation: fadeInAnimation 2s ease-in forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInAnimation {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <main>
+        <!-- Bagian Pembuka (Hero) -->
+        <section id="hero" class="hero-bg h-screen w-full flex flex-col justify-center items-center p-6 text-center">
+            <div class="fade-in">
+                <p class="text-lg md:text-xl text-stone-600">The Wedding Of</p>
+                <h1 class="font-display text-5xl md:text-7xl my-4 text-amber-900">Mufid & Intan</h1>
+            </div>
+            <div class="fade-in max-w-2xl mt-4">
+                 <p class="text-sm md:text-base italic text-stone-600">"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan-pasangan dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang."</p>
+                 <p class="mt-2 text-sm font-semibold text-stone-700">(QS. Ar-Rum: 21)</p>
+            </div>
+            <button id="open-invitation" class="fade-in mt-8 bg-amber-800 text-white py-2 px-6 rounded-full shadow-lg hover:bg-amber-900 transition-transform transform hover:scale-105">
+                Buka Undangan
+            </button>
+        </section>
+
+        <!-- Bagian Isi Utama -->
+        <div id="main-content" class="bg-[#F8F5F0] hidden">
+            <!-- Bagian Sapaan & Mempelai -->
+            <section class="py-20 px-6 text-center">
+                 <div class="max-w-4xl mx-auto">
+                    <p class="text-sm tracking-widest uppercase text-stone-500">Assalamualaikum Warahmatullahi Wabarakatuh</p>
+                    <p class="mt-6 max-w-2xl mx-auto text-stone-600">
+                        Dengan memohon rahmat dan ridha Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk menjadi saksi atas ikatan suci pernikahan putra-putri kami:
+                    </p>
+
+                    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <div class="flex flex-col items-center">
+                            <h2 class="font-display text-4xl text-amber-900">Muhammad Sayyid Mufid</h2>
+                            <p class="mt-2 text-stone-600">Putra dari</p>
+                            <p class="font-semibold text-stone-800">Bapak H. Ahmad Mufid</p>
+                            <p class="text-stone-600">&</p>
+                            <p class="font-semibold text-stone-800">Ibu Hj. Siti Aminah</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <h2 class="font-display text-4xl text-amber-900">Intan Fasya Zahara</h2>
+                             <p class="mt-2 text-stone-600">Putri dari</p>
+                            <p class="font-semibold text-stone-800">Bapak Ir. H. Budi Santoso</p>
+                            <p class="text-stone-600">&</p>
+                            <p class="font-semibold text-stone-800">Ibu Dra. Hj. Nurjanah</p>
+                        </div>
+                    </div>
+                 </div>
+            </section>
+
+             <!-- Bagian Hitung Mundur -->
+            <section class="py-20 px-6 bg-cover bg-center" style="background-image: url('https://www.transparenttextures.com/patterns/light-paper-fibers.png'); background-color: #EAE3D6;">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h3 class="font-display text-4xl text-amber-900">Menuju Hari Bahagia</h3>
+                    <div id="countdown" class="mt-8 grid grid-cols-4 gap-4 text-white">
+                        <div class="bg-amber-800 p-4 rounded-lg shadow-md">
+                            <p id="days" class="text-4xl font-bold">00</p>
+                            <p class="text-sm">Hari</p>
+                        </div>
+                        <div class="bg-amber-800 p-4 rounded-lg shadow-md">
+                            <p id="hours" class="text-4xl font-bold">00</p>
+                            <p class="text-sm">Jam</p>
+                        </div>
+                        <div class="bg-amber-800 p-4 rounded-lg shadow-md">
+                            <p id="minutes" class="text-4xl font-bold">00</p>
+                            <p class="text-sm">Menit</p>
+                        </div>
+                        <div class="bg-amber-800 p-4 rounded-lg shadow-md">
+                            <p id="seconds" class="text-4xl font-bold">00</p>
+                            <p class="text-sm">Detik</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bagian Detail Acara -->
+            <section class="py-20 px-6">
+                <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="card-bg border border-amber-200 rounded-xl shadow-lg p-8 text-center">
+                        <h3 class="font-display text-4xl text-amber-900">Akad Nikah</h3>
+                        <p class="mt-6 text-xl font-semibold">Sabtu, 26 Oktober 2024</p>
+                        <p class="mt-2 text-lg">Pukul 09.00 WIB</p>
+                        <hr class="my-6 border-amber-200 mx-auto w-1/4">
+                        <p class="font-semibold text-stone-800">Masjid Agung Darussalam Temanggung</p>
+                        <p class="mt-2 text-stone-600 text-sm">Jl. Raya Kedu No.10, Kowangan, Kec. Temanggung</p>
+                         <a href="https://maps.app.goo.gl/9Qv5p2f2JzBv7yP77" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block bg-amber-800 text-white py-2 px-5 rounded-full shadow-md hover:bg-amber-900 transition">Lihat Peta</a>
+                    </div>
+                    <div class="card-bg border border-amber-200 rounded-xl shadow-lg p-8 text-center">
+                        <h3 class="font-display text-4xl text-amber-900">Resepsi</h3>
+                        <p class="mt-6 text-xl font-semibold">Sabtu, 26 Oktober 2024</p>
+                        <p class="mt-2 text-lg">Pukul 11.00 WIB - Selesai</p>
+                        <hr class="my-6 border-amber-200 mx-auto w-1/4">
+                        <p class="font-semibold text-stone-800">Gedung Graha Bhakti Praja</p>
+                        <p class="mt-2 text-stone-600 text-sm">Jl. Jenderal Sudirman No.1, Sidorejo, Kec. Temanggung</p>
+                         <a href="https://maps.app.goo.gl/qW6jXkK9J3nFz1yT8" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block bg-amber-800 text-white py-2 px-5 rounded-full shadow-md hover:bg-amber-900 transition">Lihat Peta</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Bagian Penutup -->
+            <footer class="py-20 px-6 text-center">
+                <div class="max-w-2xl mx-auto">
+                    <p class="text-stone-600">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai.</p>
+                    <p class="mt-6 text-sm tracking-widest uppercase text-stone-500">Wassalamualaikum Warahmatullahi Wabarakatuh</p>
+                    <h3 class="mt-10 font-display text-4xl text-amber-900">Mufid & Intan</h3>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('open-invitation').addEventListener('click', function() {
+            document.getElementById('main-content').classList.remove('hidden');
+            this.style.display = 'none';
+        });
+
+        const countdownDate = new Date("October 26, 2024 09:00:00").getTime();
+
+        const countdownFunction = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "<p class='col-span-4 text-xl text-amber-900 font-display'>Acara telah berlangsung.</p>";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
